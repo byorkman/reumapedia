@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReumaPedia</title>
+  <meta name="description" content="Herramientas de reumatología pediátrica para usar en la consulta.">
+  <meta name="theme-color" content="#a8d5c8">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.svg" alt="" width="64" height="64">
+    <div>
+      <h1>ReumaPedia</h1>
+      <p>Herramientas de reumatología pediátrica para la consulta</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Herramientas</h2>
+      <div id="apps" class="apps"></div>
+    </section>
+
+    <section>
+      <h2>Recorrido de una consulta</h2>
+      <ol id="recorrido" class="recorrido"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ninguna herramienta guarda ni envía datos de pacientes: todo se calcula en el navegador.</p>
+    <p>Los contenidos son de apoyo y no reemplazan el criterio clínico.</p>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
