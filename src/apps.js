@@ -8,7 +8,7 @@ export const APPS = [
     id: "nota",
     nombre: "Nota de consulta",
     descripcion: "Arma la evolución o la primera consulta con el muñequito articular y la copia a la historia clínica.",
-    url: "https://nota-consulta-fpkt.vercel.app",
+    url: "https://nota-consulta.vercel.app",
     repo: "https://github.com/byorkman/nota-consulta",
     icono: "nota",
     relacionadas: ["jadas", "dosis", "laboratorio", "vacunas"],
