@@ -1,0 +1,88 @@
+:root {
+  --bg: #f4f8f7;
+  --card: #ffffff;
+  --text: #1c2430;
+  --muted: #5b6676;
+  --border: #d5e3df;
+  --menta: #a8d5c8;
+  --menta-suave: #e3f1ec;
+  --verde: #2f7f73;
+  --coral: #d9604a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111816;
+    --card: #19221f;
+    --text: #e7ebf0;
+    --muted: #9fb0aa;
+    --border: #2a3733;
+    --menta-suave: #22332e;
+    --verde: #7fcab8;
+    --coral: #f08a74;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.45;
+}
+header, main, footer { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+header { display: flex; align-items: center; gap: 16px; padding-top: 28px; padding-bottom: 8px; }
+header img { border-radius: 16px; flex: none; }
+h1 { margin: 0; font-size: 1.9rem; letter-spacing: -0.01em; }
+header p { margin: 2px 0 0; color: var(--muted); }
+h2 { font-size: 1.1rem; margin: 28px 0 12px; }
+
+.apps { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.app {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.app-cabecera { display: flex; align-items: center; gap: 10px; }
+.app-icono {
+  width: 40px; height: 40px; border-radius: 12px; flex: none;
+  display: grid; place-items: center;
+  background: var(--menta-suave); color: var(--verde);
+}
+.app h3 { margin: 0; font-size: 1.05rem; }
+.app p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.app .rel { font-size: 0.85rem; }
+.app .rel a { color: var(--verde); }
+.abrir {
+  margin-top: auto;
+  align-self: flex-start;
+  background: var(--verde);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+}
+@media (prefers-color-scheme: dark) { .abrir { color: #0f1a17; } }
+.abrir:focus-visible, .recorrido a:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+
+.recorrido { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.recorrido li { display: flex; align-items: center; gap: 12px; }
+.recorrido .num {
+  width: 30px; height: 30px; border-radius: 50%; flex: none;
+  display: grid; place-items: center;
+  background: var(--coral); color: #fff; font-weight: 700; font-size: 0.9rem;
+}
+.recorrido a {
+  flex: 1;
+  display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline;
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 10px 14px; color: var(--text); text-decoration: none;
+}
+.recorrido a span { color: var(--muted); font-size: 0.9rem; }
+
+footer { color: var(--muted); font-size: 0.85rem; padding-top: 24px; padding-bottom: 32px; }
+footer p { margin: 4px 0; }

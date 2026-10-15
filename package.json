@@ -1,0 +1,10 @@
+{
+  "name": "reumapedia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portal de herramientas de reumatología pediátrica",
+  "scripts": {
+    "test": "node --test"
+  }
+}
