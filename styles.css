@@ -86,3 +86,4 @@ h2 { font-size: 1.1rem; margin: 28px 0 12px; }
 
 footer { color: var(--muted); font-size: 0.85rem; padding-top: 24px; padding-bottom: 32px; }
 footer p { margin: 4px 0; }
+.version { opacity: .75; }
