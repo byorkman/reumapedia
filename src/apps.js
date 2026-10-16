@@ -49,15 +49,45 @@ export const APPS = [
     icono: "vacunas",
     relacionadas: ["dosis", "laboratorio"],
   },
+  {
+    id: "criterios",
+    nombre: "Criterios diagnósticos",
+    descripcion: "AIJ (ILAR), LES (EULAR/ACR 2019), Kawasaki, Schönlein-Henoch y síndrome de activación macrofágica.",
+    url: "https://criterios-clasificacion.vercel.app",
+    repo: "https://github.com/byorkman/criterios-clasificacion",
+    icono: "criterios",
+    relacionadas: ["nota", "jadas"],
+  },
+  {
+    id: "corticoides",
+    nombre: "Corticoides",
+    descripcion: "Equivalencias entre corticoides y plan de descenso con fechas para la familia.",
+    url: "https://corticoides-descenso.vercel.app",
+    repo: "https://github.com/byorkman/corticoides-descenso",
+    icono: "corticoides",
+    relacionadas: ["dosis", "familias"],
+  },
+  {
+    id: "familias",
+    nombre: "Información para familias",
+    descripcion: "Hojas sobre cada medicación para compartir por WhatsApp o imprimir: cómo se da, qué vigilar y cuándo consultar.",
+    url: "https://informacion-familias.vercel.app",
+    repo: "https://github.com/byorkman/informacion-familias",
+    icono: "familias",
+    relacionadas: ["dosis", "corticoides", "vacunas"],
+  },
 ];
 
 // Orden sugerido durante una consulta.
 export const RECORRIDO = [
   { app: "nota", paso: "Registrar la consulta y el examen articular" },
+  { app: "criterios", paso: "Confirmar el diagnóstico con los criterios" },
   { app: "jadas", paso: "Medir la actividad de la enfermedad" },
   { app: "dosis", paso: "Calcular la dosis si se inicia o ajusta un tratamiento" },
+  { app: "corticoides", paso: "Armar el descenso de corticoides" },
   { app: "laboratorio", paso: "Pedir los estudios basales y de control" },
   { app: "vacunas", paso: "Revisar las vacunas según la inmunosupresión" },
+  { app: "familias", paso: "Entregar la información a la familia" },
 ];
 
 // Devuelve solo las apps relacionadas que siguen existiendo en la lista.
